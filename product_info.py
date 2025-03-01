@@ -18,11 +18,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 import re
 import csv
 
-url="https://mike.larsson.pl/pl"
-clean_larson_pl=[
+url="xxxxx"
+clean_xxx_pl=[
     ["Nazwa produktu", "Cena hurtowa", "№ art", "Dostępność", "Image", "Pasuje do pojazdów" ," Grupa produktu"]
 ]
-with open("csv/clean_larson_pl.csv","w", newline="", encoding="utf-8") as file:
+with open("csv/clean_xxx.csv","w", newline="", encoding="utf-8") as file:
     writer=csv.writer(file)
 
 headers={
@@ -76,14 +76,11 @@ try:
 except Exception as e:
     print("ERROR", e)
 
-with open("csv/larson_pl.csv", newline="", encoding="utf-8") as file:
+with open("csv/xxx_pl.csv", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     next(reader)
     data = list(reader)
-i=0
 for row in data:
-    if i >29:
-        break
     url=row[6]
     driver.get(url)
     item_html=driver.page_source
@@ -117,11 +114,11 @@ for row in data:
         models = " ".join(models_list)
     except:
         models = "No models info"
-    clean_larson_pl.append([row[0],row[1],row[4],row[2],img,models, row[3]])
+    clean_xxx_pl.append([row[0],row[1],row[4],row[2],img,models, row[3]])
     i+=1
     print(f"Done {i} of {len(data)}")
-with open("csv/clean_larson_pl.csv","w", newline="", encoding="utf-8") as file:
+with open("csv/clean_xxx_pl.csv","w", newline="", encoding="utf-8") as file:
     writer=csv.writer(file)
-    for j in range(len(clean_larson_pl)):
-        writer.writerow(clean_larson_pl[j])
+    for j in range(len(clean_xxx_pl)):
+        writer.writerow(clean_xxx_pl[j])
 driver.quit()
