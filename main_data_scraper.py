@@ -20,8 +20,8 @@ import csv
 
 
 random=random.uniform(0,2)
-login_url="https://www.larsson.pl/"
-main_shop_url="https://mike.larsson.pl/pl/"
+login_url="xxxxxxxx"
+main_shop_url="xxxxxxxx"
 
 headers={
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
@@ -33,8 +33,8 @@ headers={
     "Content-Type":"text/html",
 }
 payload={
-    "username":"106863",
-    "password":"XVS12003440xv$"
+    "username":"xxxxx",
+    "password":"xxxxx"
 }
 
 chrome_options = Options()
@@ -102,7 +102,7 @@ final_list=[
          ]
 ]
 
-with open("csv/larson_pl.csv","w",newline='', encoding="utf8") as file:
+with open("csv/xxxx.csv","w",newline='', encoding="utf8") as file:
     writer=csv.writer(file)
 
 for item in find_main_info:
@@ -171,7 +171,7 @@ for i in range(len(list_of_categories)):
         print(f"Parsing {list_of_categories[i]}... page {pars_page+1} of {last_page}")
 
 
-with open("csv/larson_pl.csv","a",newline='', encoding="utf8") as file:
+with open("csv/xxxx.csv","a",newline='', encoding="utf8") as file:
     writer=csv.writer(file)
     for i in range(len(final_list)):
         writer.writerow(final_list[i])
