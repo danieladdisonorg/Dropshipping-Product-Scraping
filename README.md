@@ -2,6 +2,7 @@
 Data Scraper Project
 
 Description
+
 This project consists of two Python scripts: main_data_scraper and product_info. They are designed to automate the extraction and processing of product information from eCommerce websites using web scraping and browser automation technologies. The primary goal is to gather data about products, including product characteristics and images.
 
 The project includes non-standard solutions to bypass anti-bot mechanisms, flexible data processing methods, and handling dynamic content.
